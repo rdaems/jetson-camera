@@ -90,8 +90,8 @@ def read_cam(windowName, cap):
     while True:
         if cv2.getWindowProperty(windowName, 0) < 0:  # Check to see if the user closed the window
             # This will fail if the user closed the window; Nasties get printed to the console
-            break;
-        ret_val, displayBuf = cap.read();
+            break
+        ret_val, displayBuf = cap.read()
         if showHelp == True:
             cv2.putText(displayBuf, helpText, (11, 20), font, 1.0, (32, 32, 32), 4, cv2.LINE_AA)
             cv2.putText(displayBuf, helpText, (10, 20), font, 1.0, (240, 240, 240), 1, cv2.LINE_AA)
@@ -129,4 +129,4 @@ if __name__ == "__main__":
     read_cam(windowName, cap)
 
     cap.release()
-cv2.destroyAllWindows()
+    cv2.destroyAllWindows()
